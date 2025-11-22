@@ -1,1 +1,10 @@
-rules: []
+# fraud_document_rules.yaml
+# Purpose: Define rules for document fraud detection
+# These rules are loaded by document_verifier.py
+
+patterns:
+  fake_date: "\b(00|99)/\d{2}/\d{4}\b"       # Invalid placeholder dates
+  invalid_id: "(XXXX|0000|1111)"             # Obvious fake ID numbers
+  suspicious_name: "(Test|Fake|Dummy|Sample)" # Names commonly used in fake documents
+  placeholder_text: "(Lorem Ipsum|Placeholder|Sample Address)" # Generic placeholder fields
+  missing_fields: "(Name|DOB|ID|Address):\s*$" # Empty critical fields
