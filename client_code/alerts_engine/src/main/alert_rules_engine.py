@@ -1,0 +1,2 @@
+def evaluate(event):
+    return []

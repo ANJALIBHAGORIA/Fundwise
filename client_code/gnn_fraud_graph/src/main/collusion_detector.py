@@ -1,0 +1,2 @@
+def detect(graph):
+    return []

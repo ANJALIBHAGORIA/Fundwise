@@ -1,0 +1,4 @@
+weights:
+  doc: 0.6
+  behavior: 0.2
+  network: 0.2
