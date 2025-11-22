@@ -1,1 +1,17 @@
-templates: []
+# alert_templates.yaml
+# Templates for alerts and risk evaluation
+
+green:
+  action: allow
+  min_score: 0.7
+  message: "No suspicious activity detected."
+
+yellow:
+  action: manual_review
+  min_score: 0.4
+  message: "Some anomalies detected. Please verify transactions."
+
+red:
+  action: block
+  min_score: 0
+  message: "High risk detected! Access temporarily blocked."
