@@ -1,1 +1,23 @@
-{}
+{
+  "101": {
+    "overview": {
+      "fund_id": 101,
+      "target_amount": 1000,
+      "current_amount": 700,
+      "status": "pending",
+      "user_tags": {"green":1,"red":1},
+      "alerts":[{"alert_message":"Suspicious activity detected","timestamp":"2025-11-23"}]
+    },
+    "timeline": [
+      {"date":"2025-11-20","cumulative_contribution":200},
+      {"date":"2025-11-21","cumulative_contribution":500},
+      {"date":"2025-11-22","cumulative_contribution":700}
+    ],
+    "metrics": {
+      "num_contributors":2,
+      "avg_contribution":350,
+      "user_tag_ratios":{"green":0.5,"red":0.5},
+      "total_amount":700
+    }
+  }
+}
