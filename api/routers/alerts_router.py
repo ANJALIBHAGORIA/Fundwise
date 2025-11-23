@@ -1,7 +1,14 @@
+"""
+alerts_router.py
+----------------
+Generate rules-based / ML alerts.
+"""
+
 from fastapi import APIRouter
+from schemas.alert_schema import AlertRequest, AlertResponse
 
-router = APIRouter(prefix="/alerts")
+router = APIRouter(prefix="/alerts", tags=["Alerts"])
 
-@router.get("/status")
-async def status():
-    return {"router": "alerts_router", "status": "ok"}
+@router.post("/trigger")
+async def trigger_alert(req: AlertRequest) -> AlertResponse:
+    return AlertResponse(status="ok", alerts=[])

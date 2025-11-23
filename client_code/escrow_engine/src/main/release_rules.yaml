@@ -1,1 +1,11 @@
-rules: []
+# release_rules.yaml
+# Configurable rules for smart escrow system
+
+min_contribution_percentage: 100  # Fund must reach 100% of target
+allow_red_flag_users: false       # Block release if red-flagged users exist
+time_based_release: true          # Only allow release after goal_date
+partial_release_allowed: false    # Flag to allow partial payouts
+risk_thresholds:
+  green: allow
+  yellow: require_manual_review
+  red: block

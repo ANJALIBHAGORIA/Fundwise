@@ -1,5 +1,17 @@
-from pydantic import BaseModel
+"""
+alert_schema.py
+----------------
+Models for alerting engine
+"""
 
-class Alert(BaseModel):
+from pydantic import BaseModel
+from typing import List
+
+class AlertRequest(BaseModel):
     user_id: str
-    message: str
+    event: str
+    metadata: dict
+
+class AlertResponse(BaseModel):
+    status: str
+    alerts: List[str]

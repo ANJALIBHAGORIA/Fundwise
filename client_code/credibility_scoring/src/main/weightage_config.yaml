@@ -1,4 +1,12 @@
-weights:
-  doc: 0.6
-  behavior: 0.2
-  network: 0.2
+# weightage_config.yaml
+# Defines the weightage for combining different signals into credibility score
+
+document: 0.4
+behavior: 0.4
+graph: 0.2
+
+# Thresholds for flags
+thresholds:
+  green: 0.75
+  yellow: 0.5
+  red: 0.0
