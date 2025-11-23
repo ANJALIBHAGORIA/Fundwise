@@ -1,6 +1,17 @@
-from pydantic import BaseModel
+"""
+user_schema.py
+----------------
+User & KYC request/response models
+"""
 
-class User(BaseModel):
+from pydantic import BaseModel
+from typing import List
+
+class UserKYCRequest(BaseModel):
     user_id: str
-    name: str
-    kyc_id: str | None = None
+    document_type: str
+    document_image_b64: str
+
+class UserKYCResponse(BaseModel):
+    status: str
+    reasons: List[str]
