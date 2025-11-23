@@ -1,5 +1,11 @@
+"""
+dashboard_schema.py
+-------------------
+Dashboard aggregated output
+"""
+
 from pydantic import BaseModel
 
-class GroupOverview(BaseModel):
+class DashboardResponse(BaseModel):
     group_id: str
-    goal_amount: float
+    transparency_score: float
